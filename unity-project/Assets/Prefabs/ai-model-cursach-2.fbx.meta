@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 125aa7957cec4f140b9ed0f1b2bb72ed
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: big-piston
+    100004: Cube.001
+    100006: Cube.002
+    100008: Cube.003
+    100010: cylinder
+    100012: Cylinder.002
+    100014: flywheel
+    100016: small-piston.003
+    100018: small-piston.004
+    400000: //RootNode
+    400002: big-piston
+    400004: Cube.001
+    400006: Cube.002
+    400008: Cube.003
+    400010: cylinder
+    400012: Cylinder.002
+    400014: flywheel
+    400016: small-piston.003
+    400018: small-piston.004
+    2100000: Material.008
+    2100002: Material.010
+    2100004: Material.007
+    2100006: Material.009
+    2100008: Material.005
+    2100010: Material.003
+    2100012: Material.011
+    2100014: Material.004
+    2100016: Material.006
+    2300000: big-piston
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: cylinder
+    2300010: Cylinder.002
+    2300012: flywheel
+    2300014: small-piston.003
+    2300016: small-piston.004
+    3300000: big-piston
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: cylinder
+    3300010: Cylinder.002
+    3300012: flywheel
+    3300014: small-piston.003
+    3300016: small-piston.004
+    4300000: Cube.001
+    4300002: Cube.002
+    4300004: Cube.003
+    4300006: Cylinder.002
+    4300008: big-piston
+    4300010: cylinder
+    4300012: flywheel
+    4300014: small-piston.003
+    4300016: small-piston.004
+    7400000: Cube.001|CameraAction
+    7400002: Cube.001|Cube.001Action
+    7400004: Cube.001|Cylinder.003Action
+    7400006: Cube.001|flywheelAction
+    7400008: Cube.001|Path_R_smoke_Action
+    7400010: Cube.002|CameraAction
+    7400012: Cube.002|Cube.002Action
+    7400014: Cube.002|Cylinder.003Action
+    7400016: Cube.002|flywheelAction
+    7400018: Cube.002|Path_R_smoke_Action
+    7400020: Cube.003|CameraAction
+    7400022: Cube.003|Cube.003Action
+    7400024: Cube.003|Cylinder.003Action
+    7400026: Cube.003|flywheelAction
+    7400028: Cube.003|Path_R_smoke_Action
+    7400030: Cylinder.002|CameraAction
+    7400032: Cylinder.002|Cylinder.002Action
+    7400034: Cylinder.002|Cylinder.003Action
+    7400036: Cylinder.002|flywheelAction
+    7400038: Cylinder.002|Path_R_smoke_Action
+    7400040: big-piston|big-pistonAction
+    7400042: big-piston|CameraAction
+    7400044: big-piston|Cylinder.003Action
+    7400046: big-piston|flywheelAction
+    7400048: big-piston|Path_R_smoke_Action
+    7400050: cylinder|CameraAction
+    7400052: cylinder|Cylinder.003Action
+    7400054: cylinder|cylinderAction
+    7400056: cylinder|flywheelAction
+    7400058: cylinder|Path_R_smoke_Action
+    7400060: flywheel|CameraAction
+    7400062: flywheel|Cylinder.003Action
+    7400064: flywheel|flywheelAction
+    7400066: flywheel|Path_R_smoke_Action
+    7400068: small-piston.003|CameraAction
+    7400070: small-piston.003|Cylinder.003Action
+    7400072: small-piston.003|flywheelAction
+    7400074: small-piston.003|Path_R_smoke_Action
+    7400076: small-piston.003|small-piston.003Action
+    7400078: small-piston.004|CameraAction
+    7400080: small-piston.004|Cylinder.003Action
+    7400082: small-piston.004|flywheelAction
+    7400084: small-piston.004|Path_R_smoke_Action
+    7400086: small-piston.004|small-piston.004Action
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

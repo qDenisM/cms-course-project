@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Описание - Паровая машина</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <script type="text/javascript" src="scripts/menu.js"></script>
+    <script type="text/javascript" src="scripts/image-effects.js"></script>
+    <script src="assets/vendor/createjs.min.js"></script>
+    <script src="assets/animations/mapfla.js"></script>
+    <style>
+      .animation-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 20px auto;
+        text-align: center;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border: 1px solid #999;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      #animation_container {
+        background-color: rgba(255, 255, 255, 1.00);
+        width: 100%;
+        max-width: 1280px;
+        height: 720px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      #animation_container canvas {
+        position: absolute;
+        display: block;
+        background-color: rgba(255, 255, 255, 1.00);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      #dom_overlay_container {
+        pointer-events: none;
+        overflow: hidden;
+        width: 1280px;
+        height: 720px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        z-index: 1;
+        box-sizing: border-box;
+      }
+      @media (max-width: 1320px) {
+        .animation-container {
+          max-width: 100%;
+        }
+      }
+      @media (max-width: 770px) {
+        .animation-container {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-header">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <span class="page-title-mobile">Описание</span>
+      <nav class="main-menu">
+        <ul id="mainMenu">
+          <li><a href="Титул.html">Титул</a></li>
+          <li><a href="Теория.html">Теория</a></li>
+          <li><a href="Описание.html" class="active">Описание</a></li>
+          <li><a href="Принцип работы.html">Принцип работы</a></li>
+          <li><a href="Симулятор.html">Симулятор</a></li>
+          <li><a href="Диалог.html">Диалог</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="section-header-dynamic" id="sectionHeaderDynamic"></div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <h1>ПАРОВАЯ МАШИНА: ИСТОРИЯ, КОНСТРУКЦИЯ И ПРИМЕНЕНИЕ</h1>
+
+        <h2>ВВЕДЕНИЕ</h2>
+
+        <p>
+          Паровая машина представляет собой один из величайших изобретений человечества,
+          которое кардинально изменило ход истории и положило начало промышленной революции.
+          Это тепловой двигатель внешнего сгорания, преобразующий энергию пара в механическую
+          работу. Паровая машина стала символом технического прогресса XVIII и XIX веков,
+          обеспечив возможность механизации производства и развития транспорта.
+        </p>
+
+        <p>
+          Уникальность паровой машины заключается в том, что она стала первым практическим
+          устройством, способным преобразовывать тепловую энергию в механическую работу
+          в промышленных масштабах. До ее изобретения человечество полагалось исключительно
+          на мускульную силу людей и животных, энергию ветра и воды. Паровая машина освободила
+          производство от географических ограничений и позволила создавать фабрики в любых
+          местах, где была доступна вода и топливо.
+        </p>
+
+        <h2>ИСТОРИЯ СОЗДАНИЯ ПАРОВОЙ МАШИНЫ</h2>
+
+        <h3>Ранние попытки использования пара</h3>
+
+        <p>
+          Идея использования пара для совершения механической работы не нова. Еще в I веке
+          нашей эры древнегреческий математик и инженер Герон Александрийский создал
+          эолипил — устройство, которое можно считать прообразом паровой турбины. Однако
+          это изобретение носило скорее демонстрационный характер и не нашло практического
+          применения.
+        </p>
+
+        <p>
+          В эпоху Возрождения интерес к паровым устройствам возродился. Леонардо да Винчи
+          оставил в своих записях наброски паровых пушек и других устройств, использующих
+          силу пара. Однако практическая реализация этих идей была невозможна из-за
+          отсутствия необходимых технологий обработки металла и точных методов изготовления
+          деталей.
+        </p>
+
+        <h3>Первые практические паровые машины</h3>
+
+        <div class="image-wrapper image-left">
+          <img src="assets/images/first_machine.jpg" alt="Ранняя паровая машина" class="content-image" />
+        </div>
+
+        <p>
+          Первая практически применимая паровая машина была создана в 1698 году английским
+          инженером <span class="text-replace" data-image="assets/images/severi.jpg" data-alt="Томас Севери">Томасом Севери</span>.
+          Его устройство, получившее название "Друг шахтера", предназначалось для откачки
+          воды из шахт. Машина Севери работала без поршня, используя конденсацию пара для
+          создания разрежения, которое всасывало воду. Хотя эта машина была неэффективной
+          и опасной, она доказала принципиальную возможность использования пара для
+          практических целей.
+        </p>
+
+        <p>
+          В 1712 году <span class="text-replace" data-image="assets/images/newcomen.jpg" data-alt="Томас Ньюкомен">Томас Ньюкомен</span>,
+          английский кузнец и изобретатель, создал атмосферную паровую машину, которая
+          стала значительным шагом вперед. Машина Ньюкомена использовала поршень и
+          цилиндр, а также систему клапанов для управления подачей пара и воды. Она
+          работала по принципу создания разрежения в цилиндре путем конденсации пара
+          холодной водой. Хотя КПД этой машины был очень низким (менее 1%), она широко
+          использовалась для откачки воды из шахт на протяжении более 50 лет.
+        </p>
+
+        <h3>Революция Джеймса Уатта</h3>
+
+        <p>
+          Настоящий прорыв в развитии паровых машин произошел благодаря шотландскому
+          изобретателю и инженеру <span class="text-replace" data-image="assets/images/watt.jpg" data-alt="Джеймс Уатт">Джеймсу Уатту</span> (1736-1819).
+          В 1765 году, работая над ремонтом модели машины Ньюкомена в университете
+          Глазго, Уатт понял основную причину неэффективности существующих машин:
+          значительные потери тепла при попеременном нагреве и охлаждении цилиндра.
+        </p>
+
+        <p>
+          Гениальное решение Уатта заключалось в создании отдельного конденсатора пара,
+          что позволило поддерживать цилиндр постоянно горячим. Это изобретение, запатентованное
+          в 1769 году, увеличило эффективность паровой машины в несколько раз. Уатт также
+          разработал механизм преобразования возвратно-поступательного движения поршня во
+          вращательное движение, что открыло возможность использования паровых машин для
+          привода различных механизмов, а не только для откачки воды.
+        </p>
+
+        <p>
+          В 1781 году Уатт создал паровую машину с планетарной передачей, которая
+          преобразовывала возвратно-поступательное движение во вращательное. В 1782 году
+          он запатентовал машину двойного действия, в которой пар подавался по обе стороны
+          поршня, что еще больше повысило эффективность. Эти изобретения сделали паровую
+          машину универсальным источником механической энергии.
+        </p>
+
+        <h2>КОНСТРУКТОРЫ И ИЗОБРЕТАТЕЛИ</h2>
+
+        <h3>Джеймс Уатт - главный конструктор</h3>
+
+        <p>
+          Джеймс Уатт по праву считается отцом современной паровой машины. Родившийся в
+          Гриноке, Шотландия, Уатт с детства проявлял интерес к механике и математике.
+          Работая инструментальщиком в университете Глазго, он получил доступ к лучшим
+          научным знаниям своего времени и возможность экспериментировать.
+        </p>
+
+        <p>
+          Партнерство Уатта с промышленником Мэтью Болтоном, основанное в 1775 году,
+          стало ключевым фактором успеха. Болтон предоставил финансовую поддержку и
+          производственные мощности на своем заводе "Сохо" в Бирмингеме. Вместе они
+          создали компанию "Болтон и Уатт", которая стала ведущим производителем паровых
+          машин в мире.
+        </p>
+
+        <p>
+          Уатт не только улучшил конструкцию паровой машины, но и ввел единицу измерения
+          мощности — лошадиную силу, которая используется до сих пор. Он также разработал
+          множество вспомогательных устройств и механизмов, включая центробежный регулятор
+          скорости, индикатор давления пара и различные типы клапанов.
+        </p>
+
+        <h3>Другие значимые изобретатели</h3>
+
+        <p>
+          После Уатта многие инженеры внесли свой вклад в развитие паровых машин. Ричард
+          Тревитик создал первые паровые машины высокого давления, что позволило значительно
+          уменьшить размеры установок. Джордж Стефенсон применил паровые машины для
+          железнодорожного транспорта, создав знаменитый паровоз "Ракета".
+        </p>
+
+        <h2>УСТРОЙСТВО ПАРОВОЙ МАШИНЫ</h2>
+
+        <p>
+          Паровая машина состоит из нескольких основных функциональных частей, каждая из
+          которых выполняет определенную роль в процессе преобразования энергии пара в
+          механическую работу. Понимание устройства каждой части необходимо для полного
+          понимания принципов работы установки.
+        </p>
+
+        <div class="parts-container">
+          <div class="parts-list">
+            <h3>Функциональные части установки</h3>
+            <ul>
+              <li data-image="assets/images/cylinder.jpg">Цилиндр</li>
+              <li data-image="assets/images/piston.jpg">Поршень</li>
+              <li data-image="assets/images/valve-machine.jpg">Клапанный механизм</li>
+              <li data-image="assets/images/stick.jpg">Шатун</li>
+              <li data-image="assets/images/crank.jpg">Кривошип</li>
+              <li data-image="assets/images/flywheel.jpg">Маховик</li>
+            </ul>
+          </div>
+          <div class="parts-viewer">
+            <div class="parts-viewer-placeholder">Выберите часть установки из списка для просмотра</div>
+          </div>
+        </div>
+
+        <h3>Основные компоненты</h3>
+
+        <p>
+          <strong>Цилиндр и поршень</strong> — это сердце паровой машины. Цилиндр представляет
+          собой полый металлический корпус, внутри которого движется поршень. Поршень
+          представляет собой диск, плотно прилегающий к стенкам цилиндра благодаря
+          поршневым кольцам. Под действием пара поршень совершает возвратно-поступательное
+          движение, которое преобразуется во вращательное движение маховика.
+        </p>
+
+        <p>
+          <strong>Клапанный механизм</strong> управляет подачей пара в цилиндр и выпуском
+          отработанного пара. В машинах Уатта использовался золотниковый клапан, который
+          перемещался синхронно с движением поршня, открывая и закрывая каналы для впуска
+          и выпуска пара. Современные паровые машины используют более сложные системы
+          клапанов, включая тарельчатые и игольчатые клапаны.
+        </p>
+
+        <p>
+          <strong>Шатун и кривошип</strong> преобразуют возвратно-поступательное движение
+          поршня во вращательное движение маховика. Шатун соединяет поршень с кривошипом,
+          который закреплен на валу маховика. Эта система позволяет преобразовать линейное
+          движение в круговое, что является ключевым для работы большинства механизмов.
+        </p>
+
+        <p>
+          <strong>Маховик</strong> — это тяжелое колесо, закрепленное на валу. Его основная
+          функция — накопление кинетической энергии и сглаживание неравномерности работы
+          машины. Благодаря большой массе маховик продолжает вращаться даже во время
+          тактов, когда поршень не создает движущей силы, обеспечивая плавную и равномерную
+          работу установки.
+        </p>
+
+        <div class="animation-container">
+          <div id="animation_container">
+            <canvas id="canvas" width="1280" height="720"></canvas>
+            <div id="dom_overlay_container"></div>
+            <div id="animation_loading" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #666; font-size: 14pt;">Загрузка анимации...</div>
+          </div>
+        </div>
+
+        <h2>ПРИМЕНЕНИЕ ПАРОВЫХ МАШИН</h2>
+
+        <h3>Промышленное применение</h3>
+
+        <div class="image-wrapper image-right">
+          <img src="assets/images/smoke_industry,jpg.jpg" alt="Паровая машина в промышленности" class="content-image" />
+        </div>
+
+        <p>
+          Первоначально паровые машины использовались главным образом для откачки воды из
+          шахт, что было критически важно для угольной промышленности. Однако после
+          изобретений Уатта область применения значительно расширилась. Паровая машина
+          стала основным источником механической энергии для текстильных фабрик, металлургических
+          заводов, мукомольных мельниц и других промышленных предприятий.
+        </p>
+
+        <p>
+          В текстильной промышленности паровые машины приводили в действие прядильные и
+          ткацкие станки, что позволило резко увеличить производительность труда. На
+          металлургических заводах паровые машины использовались для привода прокатных
+          станов, молотов и других механизмов. Это привело к революции в производстве
+          металла и созданию крупных промышленных центров.
+        </p>
+
+        <h3>Транспортное применение</h3>
+
+        <p>
+          Одним из самых значимых применений паровых машин стало создание парового транспорта.
+          В 1807 году Роберт Фултон создал первый коммерчески успешный пароход "Клермонт",
+          который начал регулярные рейсы по реке Гудзон. Пароходы революционизировали
+          водный транспорт, позволив судам двигаться независимо от ветра и течения.
+        </p>
+
+        <div class="image-wrapper image-left">
+          <img src="assets/images/smoke_transport.jpg" alt="Паровоз" class="content-image" />
+        </div>
+
+        <p>
+          Еще более значимым стало применение паровых машин на железнодорожном транспорте.
+          В 1825 году была открыта первая общественная железная дорога Стоктон-Дарлингтон
+          в Англии, а в 1829 году паровоз "Ракета" Джорджа Стефенсона победил в знаменитых
+          соревнованиях в Рейнхилле. Железные дороги с паровозами связали города и страны,
+          ускорив развитие торговли и промышленности.
+        </p>
+
+        <h3>Сельское хозяйство</h3>
+
+        <p>
+          Паровая машина нашла применение и в сельском хозяйстве. Паровые тракторы и
+          молотилки значительно повысили эффективность сельскохозяйственных работ. Хотя
+          паровые тракторы были громоздкими и требовали много топлива, они стали важным
+          шагом на пути к механизации сельского хозяйства.
+        </p>
+
+        <h2>ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h2>
+
+        <p>
+          Типичная паровая машина эпохи промышленной революции имела мощность от 5 до 100
+          лошадиных сил. КПД ранних машин Ньюкомена составлял менее 1%, машины Уатта
+          достигли КПД около 3-5%, а более поздние паровые машины высокого давления могли
+          достигать КПД до 10-15%. Для сравнения, современные паровые турбины имеют КПД
+          более 40%.
+        </p>
+
+        <p>
+          Рабочее давление пара в машинах Уатта составляло около 1 атмосферы (атмосферные
+          машины), в то время как более поздние машины высокого давления работали при
+          давлении 5-10 атмосфер. Температура пара обычно составляла 100-150°C, хотя в
+          машинах высокого давления она могла достигать 200°C и выше.
+        </p>
+
+        <h2>ВЛИЯНИЕ НА РАЗВИТИЕ ЦИВИЛИЗАЦИИ</h2>
+
+        <p>
+          Изобретение и совершенствование паровой машины стало катализатором промышленной
+          революции, которая началась в Англии в конце XVIII века и распространилась по
+          всему миру. Паровая машина позволила создать фабричное производство, которое
+          заменило ремесленное производство и мануфактуры.
+        </p>
+
+        <div class="image-wrapper image-left">
+          <img src="assets/images/machine_factory.jpg" alt="Влияние на цивилизацию" class="content-image" />
+        </div>
+
+        <p>
+          Развитие парового транспорта привело к созданию глобальной транспортной сети,
+          которая связала отдаленные регионы и способствовала развитию международной
+          торговли. Железные дороги и пароходы сделали возможным быстрое перемещение
+          людей и товаров на большие расстояния, что было невозможно в доиндустриальную
+          эпоху.
+        </p>
+
+        <p>
+          Паровая машина также оказала глубокое влияние на социальную структуру общества.
+          Развитие промышленности привело к росту городов и формированию рабочего класса.
+          Изменился образ жизни миллионов людей, которые переехали из сельской местности
+          в города для работы на фабриках и заводах.
+        </p>
+
+        <h2>СОВРЕМЕННОЕ ЗНАЧЕНИЕ</h2>
+
+        <p>
+          Хотя паровые машины поршневого типа в значительной степени были вытеснены
+          двигателями внутреннего сгорания, электрическими двигателями и паровыми
+          турбинами, их принципы работы остаются актуальными. Паровые турбины, которые
+          используются на современных электростанциях, являются прямыми потомками паровых
+          машин и работают на тех же физических принципах.
+        </p>
+
+        <div class="image-wrapper image-right">
+          <img src="assets/images/today.jpg" alt="Современное применение" class="content-image" />
+        </div>
+
+        <p>
+          Паровая машина также остается важным объектом изучения в инженерном образовании,
+          так как она наглядно демонстрирует основные принципы термодинамики, механики и
+          преобразования энергии. Многие технические музеи мира содержат коллекции
+          исторических паровых машин, которые служат напоминанием о важности этого
+          изобретения для развития человеческой цивилизации.
+        </p>
+
+        <h2>ЗАКЛЮЧЕНИЕ</h2>
+
+        <p>
+          Паровая машина представляет собой одно из самых значимых изобретений в истории
+          человечества. Она не только произвела техническую революцию, но и изменила
+          экономическую, социальную и культурную структуру общества. От первых опытов
+          Герона Александрийского до совершенных машин Уатта и их применения в транспорте
+          и промышленности — история паровой машины является историей человеческого
+          стремления к прогрессу и инновациям.
+        </p>
+
+        <p>
+          Изучение паровой машины позволяет понять не только технические принципы
+          преобразования энергии, но и исторический контекст промышленной революции.
+          Это устройство служит прекрасным примером того, как одно изобретение может
+          изменить весь мир и открыть новые возможности для развития цивилизации.
+        </p>
+
+        <p>
+          В современную эпоху, когда мы сталкиваемся с новыми вызовами в области энергетики
+          и экологии, изучение истории паровой машины напоминает нам о важности инноваций
+          и поиска эффективных решений. Принципы, заложенные в работу паровой машины,
+          продолжают использоваться в современных энергетических системах, демонстрируя
+          непреходящую ценность фундаментальных инженерных решений.
+        </p>
+      </div>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var headerBar = document.getElementById('sectionHeaderDynamic');
+        if (!headerBar) return;
+
+        var headings = Array.prototype.slice.call(document.querySelectorAll('.content h2'));
+        if (!headings.length) {
+          headerBar.style.display = 'none';
+          return;
+        }
+
+        function updateSectionHeader() {
+          var active = null;
+          var threshold = 100; 
+
+          for (var i = 0; i < headings.length; i++) {
+            var rect = headings[i].getBoundingClientRect();
+            if (rect.top <= threshold) {
+              active = headings[i];
+            } else {
+              break;
+            }
+          }
+
+          if (active) {
+            headerBar.textContent = active.textContent.trim();
+            headerBar.style.visibility = 'visible';
+          } else {
+            headerBar.style.visibility = 'hidden';
+          }
+        }
+
+        window.addEventListener('scroll', updateSectionHeader);
+        window.addEventListener('resize', updateSectionHeader);
+        updateSectionHeader();
+      });
+    </script>
+    <script>
+      var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+      
+      function initAnimation() {
+        if (typeof createjs === 'undefined') {
+          setTimeout(initAnimation, 100);
+          return;
+        }
+        
+        if (typeof AdobeAn === 'undefined') {
+          setTimeout(initAnimation, 100);
+          return;
+        }
+        
+        canvas = document.getElementById("canvas");
+        anim_container = document.getElementById("animation_container");
+        dom_overlay_container = document.getElementById("dom_overlay_container");
+        
+        if (!canvas) {
+          return;
+        }
+        
+        if (!anim_container) {
+          return;
+        }
+        
+        try {
+          var comp = AdobeAn.getComposition("0901BC1C1FE94543B8DEED6BA31439B5");
+          if (!comp) {
+            return;
+          }
+          
+          var lib = comp.getLibrary();
+          
+          var manifest = lib.properties.manifest.map(function(item) {
+            return {
+              src: "assets/animations/" + item.src,
+              id: item.id
+            };
+          });
+          
+          var loader = new createjs.LoadQueue(false);
+          loader.installPlugin(createjs.Sound);
+          loader.addEventListener("fileload", function(evt) { 
+            handleFileLoad(evt, comp); 
+          });
+          loader.addEventListener("complete", function(evt) { 
+            handleComplete(evt, comp); 
+          });
+          loader.addEventListener("error", function(evt) { 
+          });
+          loader.loadManifest(manifest);
+        } catch (e) {
+        }
+      }
+      
+      function handleFileLoad(evt, comp) {
+        var images = comp.getImages();
+        if (evt && (evt.item.type == "image")) { 
+          images[evt.item.id] = evt.result; 
+        }
+      }
+      
+      function handleComplete(evt, comp) {
+        var lib = comp.getLibrary();
+        var ss = comp.getSpriteSheet();
+        var queue = evt.target;
+        var ssMetadata = lib.ssMetadata;
+        for (i = 0; i < ssMetadata.length; i++) {
+          ss[ssMetadata[i].name] = new createjs.SpriteSheet({ "images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames })
+        }
+         exportRoot = new lib.mapfla();
+         stage = new lib.Stage(canvas);
+         stage.enableMouseOver();
+         
+         function setupCoordinateScaling() {
+           var originalWidth = 1280;
+           var originalHeight = 720;
+           
+           var originalGetPointerData = stage.getPointerData;
+           stage.getPointerData = function(id) {
+             var data = originalGetPointerData.call(this, id);
+             if (data && canvas) {
+               var rect = canvas.getBoundingClientRect();
+               var scaleX = originalWidth / rect.width;
+               var scaleY = originalHeight / rect.height;
+               
+               if (data.x !== undefined) {
+                 data.x = data.x * scaleX;
+               }
+               if (data.y !== undefined) {
+                 data.y = data.y * scaleY;
+               }
+             }
+             return data;
+           };
+           
+           canvas.addEventListener('mousedown', function(e) {
+             var rect = canvas.getBoundingClientRect();
+             var scaleX = originalWidth / rect.width;
+             var scaleY = originalHeight / rect.height;
+             
+             var x = (e.clientX - rect.left) * scaleX;
+             var y = (e.clientY - rect.top) * scaleY;
+             
+             var pointerData = stage.getPointerData(-1);
+             if (pointerData) {
+               pointerData.x = x;
+               pointerData.y = y;
+             }
+           }, true);
+           
+           canvas.addEventListener('mousemove', function(e) {
+             var rect = canvas.getBoundingClientRect();
+             var scaleX = originalWidth / rect.width;
+             var scaleY = originalHeight / rect.height;
+             
+             var x = (e.clientX - rect.left) * scaleX;
+             var y = (e.clientY - rect.top) * scaleY;
+             
+             var pointerData = stage.getPointerData(-1);
+             if (pointerData) {
+               pointerData.x = x;
+               pointerData.y = y;
+             }
+           }, true);
+         }
+         
+         fnStartAnimation = function() {
+           stage.addChild(exportRoot);
+           createjs.Ticker.framerate = lib.properties.fps;
+           createjs.Ticker.addEventListener("tick", stage);
+           
+           setupCoordinateScaling();
+           
+           setTimeout(function() {
+             stage.update();
+             setupButtonHitAreas(exportRoot);
+           }, 300);
+         }
+         
+         function setupButtonHitAreas(container) {
+           if (!container || !container.numChildren) return;
+           
+           for (var i = 0; i < container.numChildren; i++) {
+             var child = container.getChildAt(i);
+             
+             if (child.buttonHelper) {
+               var redShape = findRedShape(child);
+               
+               if (redShape) {
+                 stage.update();
+                 var localBounds = redShape.getBounds();
+                 
+                 if (localBounds) {
+                   var shapeMatrix = redShape.getMatrix();
+                   var x = localBounds.x;
+                   var y = localBounds.y;
+                   var width = localBounds.width;
+                   var height = localBounds.height;
+                   
+                   if (shapeMatrix) {
+                     x += shapeMatrix.tx;
+                     y += shapeMatrix.ty;
+                   }
+                   
+                   var hitArea = new createjs.Shape();
+                   hitArea.graphics.beginFill("#000").drawRect(x, y, width, height);
+                   child.hitArea = hitArea;
+                 }
+               }
+             }
+             
+             if (child.numChildren !== undefined && child.numChildren > 0) {
+               setupButtonHitAreas(child);
+             }
+           }
+         }
+         
+         function findRedShape(container) {
+           if (!container) return null;
+           
+           if (container.shape && container.shape instanceof createjs.Shape) {
+             return container.shape;
+           }
+           
+           if (container.numChildren) {
+             for (var i = 0; i < container.numChildren; i++) {
+               var child = container.getChildAt(i);
+               
+               if (child instanceof createjs.Shape) {
+                 var graphics = child.graphics;
+                 if (graphics && graphics._instructions) {
+                   for (var j = 0; j < graphics._instructions.length; j++) {
+                     var cmd = graphics._instructions[j];
+                     if (cmd && cmd.f && typeof cmd.f === 'string' && 
+                         (cmd.f.indexOf('255,0,0') !== -1 || cmd.f.indexOf('rgba(255,0,0') !== -1)) {
+                       return child;
+                     }
+                   }
+                 }
+               }
+               
+               if (child.numChildren !== undefined && child.numChildren > 0) {
+                 var found = findRedShape(child);
+                 if (found) return found;
+               }
+             }
+           }
+           
+           return null;
+         }
+         
+         AdobeAn.compositionLoaded(lib.properties.id);
+         fnStartAnimation();
+         
+         var loadingEl = document.getElementById("animation_loading");
+         if (loadingEl) {
+           loadingEl.style.display = "none";
+         }
+      }
+      function playSound(id, loop, offset) {
+        return createjs.Sound.play(id, { 
+          'interrupt': createjs.Sound.INTERRUPT_EARLY, 
+          'loop': loop, 
+          'offset': offset 
+        });
+      }
+      
+      window.addEventListener('load', function() {
+        setTimeout(initAnimation, 100);
+      });
+    </script>
+  </body>
+</html>
