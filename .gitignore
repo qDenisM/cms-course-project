@@ -15,6 +15,16 @@
 /[Uu]ser[Ss]ettings/
 *.log
 
+# Unity project lives in a subfolder (`unity-project/`), so root-anchored rules
+# above don't match it. Keep generated Unity folders out of the repo.
+unity-project/[Ll]ibrary/
+unity-project/[Tt]emp/
+unity-project/[Oo]bj/
+unity-project/[Bb]uild/
+unity-project/[Bb]uilds/
+unity-project/[Ll]ogs/
+unity-project/[Uu]ser[Ss]ettings/
+
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
 *.blend1.meta
